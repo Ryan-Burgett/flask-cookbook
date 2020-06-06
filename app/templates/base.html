@@ -9,10 +9,15 @@
     {% endif %}
 </head>
 <body>
+
 <div>Cookbook:
     <a href={{ url_for('index') }}>Home</a>
-    <a {{ url_for('login') }}>Login</a>
+    <a href={{ url_for('favorites') }}>Favorites</a>
+    <a href={{ url_for('add_page') }}>Add A Recipe</a>
+    <a href={{ url_for('get_recipe') }}>Recipe</a>
 </div>
+
+
 <hr>
 {% with messages = get_flashed_messages() %}
     {% if messages %}
